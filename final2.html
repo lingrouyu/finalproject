@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Taiwan Map</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+  	 integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+  	 crossorigin=""/>
+
+	<style>
+		#map{width: 1600 ; height: 600px;background-color: #FFF0B0}
+
+	</style>
+
+</head>
+<body>
+
+ 	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   	integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   	crossorigin=""></script>
+
+	<script src="tw.json"></script>
+
+  	<div id="map"></div>
+
+	<script>
+		var pu =[23.96887157156907, 121.07348623004351];
+
+		var map = L.map('map').setView(pu,7);
+ 
+		const myIcon = L.icon({
+			  iconUrl: '01.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([25.128467293181934, 121.74365995371008], {icon: myIcon}).bindPopup('基隆廟口夜市').addTo(map);
+			L.marker([25.142821642288514, 121.78996541116908], {icon: myIcon}).addTo(map);
+			L.marker([25.09749419198602, 121.71445422698669], {icon: myIcon}).addTo(map);
+			
+
+		const myIcon2 = L.icon({
+			  iconUrl: '02.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([25.08825894993418, 121.52424531301706], {icon: myIcon2}).addTo(map);
+			L.marker([25.0385857748293, 121.49832191329828], {icon: myIcon2}).addTo(map);
+			L.marker([25.036954560302608, 121.49765621301634], {icon: myIcon2}).addTo(map);
+			L.marker([25.051167914791268, 121.57755758418106], {icon: myIcon2}).addTo(map);
+			L.marker([25.0385857748293, 121.49832191329828], {icon: myIcon2}).addTo(map);
+			L.marker([25.024726595846648, 121.52935526883832], {icon: myIcon2}).addTo(map);
+			L.marker([25.030432820858262, 121.5542671976741], {icon: myIcon2}).addTo(map);
+			L.marker([25.05692868128289, 121.51542737068775], {icon: myIcon2}).addTo(map);
+			L.marker([24.99089381983959, 121.54167835349577], {icon: myIcon2}).addTo(map);
+			L.marker([25.013991457075555, 121.53476504000284], {icon: myIcon2}).addTo(map);
+			L.marker([25.029325546283903, 121.50594668418074], {icon: myIcon2}).addTo(map);
+
+		const myIcon3 = L.icon({
+			  iconUrl: '03.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([25.008600320116805, 121.51164126698933], {icon: myIcon3}).addTo(map);
+			L.marker([25.0059790094363, 121.45546979767373], {icon: myIcon3}).addTo(map);
+			L.marker([25.065347890043487, 121.50073367068802], {icon: myIcon3}).addTo(map);
+			L.marker([25.003358651379017, 121.41542779767371], {icon: myIcon3}).addTo(map);
+
+		const myIcon4 = L.icon({
+			  iconUrl: '04.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([25.00294999249642, 121.3060125265094], {icon: myIcon4}).addTo(map);
+			L.marker([24.930874753316104, 121.28311899767273], {icon: myIcon4}).addTo(map);
+			L.marker([24.881976074994586, 121.21151274000087], {icon: myIcon4}).addTo(map);
+			L.marker([24.960195546459122, 121.215141240002], {icon: myIcon4}).addTo(map);
+
+		const myIcon5 = L.icon({
+			  iconUrl: '05.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([24.79645712578274, 120.99834518260418], {icon: myIcon5}).addTo(map);
+			L.marker([24.803406288513706, 120.96862129951974], {icon: myIcon5}).addTo(map);
+			L.marker([24.804614721099334, 120.9655946688354], {icon: myIcon5}).addTo(map);
+			L.marker([24.804748864688907, 120.92270741301306], {icon: myIcon5}).addTo(map);
+
+		const myIcon6 = L.icon({
+			  iconUrl: '06.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([24.677682910901254, 120.87714589582019], {icon: myIcon6}).addTo(map);
+			L.marker([24.69762018527855, 120.90657216883378], {icon: myIcon6}).addTo(map);
+			L.marker([24.570092917067935, 120.82046651116102], {icon: myIcon6}).addTo(map);
+
+		const myIcon7 = L.icon({
+			  iconUrl: '07.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([24.176470242438285, 120.64532380332663], {icon: myIcon7}).addTo(map);
+			L.marker([24.14817376372676, 120.6843990246485], {icon: myIcon7}).addTo(map);
+			L.marker([24.130297719566634, 120.68162592990414], {icon: myIcon7}).addTo(map);
+			L.marker([24.133380370942934, 120.70028721349335], {icon: myIcon7}).addTo(map);
+			L.marker([24.253796085304018, 120.5626473688277], {icon: myIcon7}).addTo(map);
+			L.marker([24.18174223154085, 120.59269129951113], {icon: myIcon7}).addTo(map);
+
+		const myIcon8 = L.icon({
+			  iconUrl: '08.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([24.07286049476499, 120.5266563534831], {icon: myIcon8}).addTo(map);
+
+		const myIcon9 = L.icon({
+			  iconUrl: '09.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([23.988264628084043, 120.68646673998859], {icon: myIcon9}).addTo(map);
+			L.marker([23.972903244760797, 120.96081036697495], {icon: myIcon9}).addTo(map);
+
+
+		const myIcon10 = L.icon({
+			  iconUrl: '10.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([23.696474169949344, 120.54318975347806], {icon: myIcon4}).addTo(map);
+
+
+		const myIcon11 = L.icon({
+			  iconUrl: '11.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([23.47977841378064, 120.4496947264885], {icon: myIcon11}).addTo(map);
+			L.marker([23.472233064988266, 120.43145228231059], {icon: myIcon11}).addTo(map);
+
+
+		const myIcon12 = L.icon({
+			  iconUrl: '12.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([23.003655498672256, 120.19045615346892], {icon: myIcon12}).addTo(map);
+			L.marker([23.011353438187868, 120.20025592463361], {icon: myIcon12}).addTo(map);
+			L.marker([22.982820606379008, 120.21939484182425], {icon: myIcon12}).addTo(map);
+			L.marker([23.008435443742556, 120.20677636881126], {icon: myIcon12}).addTo(map);
+			L.marker([22.989454196189246, 120.17473912648208], {icon: myIcon12}).addTo(map);
+
+
+		const myIcon13 = L.icon({
+			  iconUrl: '13.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([22.66631178913085, 120.29981988414922], {icon: myIcon13}).addTo(map);
+			L.marker([22.632328782845086, 120.29917172462879], {icon: myIcon13}).addTo(map);
+			L.marker([22.599089575944767, 120.31999488229921], {icon: myIcon13}).addTo(map);
+			L.marker([22.599852261633743, 120.32058496825454], {icon: myIcon13}).addTo(map);
+			L.marker([22.61845306912978, 120.3177276669574], {icon: myIcon13}).addTo(map);
+			L.marker([22.61724427113259, 120.29844205346413], {icon: myIcon13}).addTo(map);
+			L.marker([22.621401453908014, 120.30761536880627], {icon: myIcon13}).addTo(map);
+			L.marker([22.61505416695509, 120.30688385531285], {icon: myIcon13}).addTo(map);
+			L.marker([22.623262354537033, 120.27897099764192], {icon: myIcon13}).addTo(map);
+
+
+		const myIcon14 = L.icon({
+			  iconUrl: '14.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([21.946201675616656, 120.79660773996244], {icon: myIcon14}).addTo(map);
+			L.marker([22.670135283273066, 120.48987239764259], {icon: myIcon14}).addTo(map);
+
+
+		const myIcon15 = L.icon({
+			  iconUrl: '15.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([24.677451221193447, 121.7681664534913], {icon: myIcon15}).addTo(map);
+			L.marker([24.758235636564947, 121.75875349767018], {icon: myIcon15}).addTo(map);
+			L.marker([24.664097234665228, 121.76138082835337], {icon: myIcon15}).addTo(map);
+
+
+		const myIcon16 = L.icon({
+			  iconUrl: '16.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([23.973023227874673, 121.60987468416623], {icon: myIcon16}).addTo(map);
+
+
+		const myIcon17 = L.icon({
+			  iconUrl: '17.png',
+			  iconSize: [90, 90],
+			});
+			L.marker([22.75514584821172, 121.14869245346591], {icon: myIcon17}).addTo(map);
+			L.marker([22.75778928008745, 121.1565026863116], {icon: myIcon17}).addTo(map);
+			L.marker([23.12428288901163, 121.22132602648385], {icon: myIcon17}).addTo(map);
+
+		
+
+		L.geoJSON(geojsonFeature).addTo(map);
+
+ 
+
+	</script>
+
+
+</body>
+</html>
